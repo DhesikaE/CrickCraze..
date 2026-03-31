@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+body{
+  font-family: Arial;
+    background-image: url(backimgs8.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  color: white;
+  font-size: 20px;
+  /* opacity: 1.7; */
+  /* font-weight: 100px; */
+}
+
+.container{
+  width: 60%;
+  margin: auto;
+}
+
+.item{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  background-color: grey;
+   
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+
+}
+
+.total{
+  margin-top: 10px;
+}
+.cartcontent{
+    padding: 50px;
+}
+
+.back{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgb(58, 68, 204);
+  color: white;
+  text-decoration: none;
+}
+.rating{
+  color: gold;
+  font-size: 18px;
+}
+span{
+    color: green;
+    /* font: 15px; */
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- <h1></h1> -->
+
+<div class="item">
+ <div class="cartimg"><img src="Kookaburra11.jpeg"></div> 
+<div class="cartcontent">
+  
+  <p>Kookaburra Batting Gloves - ₹2500</p>
+  <p class="rating">⭐⭐⭐⭐☆</p>
+  <p><span ><i class="fa-solid fa-arrow-down"></i>55%</span></p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="cartimg"> <img src="adidas1.jpg"></div>
+ <div class="cartcontent">
+
+  <p>Adidas Sport Shoe - ₹2800</p>
+    <p class="rating">⭐⭐⭐☆☆</p>
+     <p><span ><i class="fa-solid fa-arrow-down"></i>35%</span></p>
+  </div>
+</div>
+
+<p class="total">Total: ₹5300</p>
+
+<a href="Cricket.html" class="back">⬅ Back to Shop</a>
+
+</div>
+
+</body>
+</html>

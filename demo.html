@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    font-family:Arial;
+}
+
+/* Hide checkbox */
+#cartToggle{
+    display:none;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:30px;
+    background:#ff4d4d;
+    color:white;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+/* Text */
+.btn span{
+    display:inline-block;
+    transition:0.4s;
+}
+
+/* Cart icon */
+.btn::after{
+    content:"🛒";
+    position:absolute;
+    right:-30px;
+    transition:0.4s;
+}
+
+/* Hover */
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* CLICK EFFECT */
+#cartToggle:checked + .btn{
+    background:#28a745;
+}
+
+/* Text change */
+#cartToggle:checked + .btn span{
+    transform:translateX(-10px);
+}
+
+/* Icon slide in */
+#cartToggle:checked + .btn::after{
+    right:10px;
+}
+
+/* Success tick */
+#cartToggle:checked + .btn::before{
+    content:"✔";
+    position:absolute;
+    left:10px;
+}
+
+/* Pulse animation */
+#cartToggle:checked + .btn{
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop{
+    0%{ transform:scale(1); }
+    50%{ transform:scale(1.2); }
+    100%{ transform:scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<input type="checkbox" id="cartToggle">
+<label for="cartToggle" class="btn">
+    <span>Add to Cart</span>
+</label>
+
+</body>
+</html>
